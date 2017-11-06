@@ -1,18 +1,32 @@
-var Backbone = require('backbone');
-var BlockList = require('../models/blockList');
-
 var $ = require('jquery');
+var Backbone = require('backbone');
 
 var App = Backbone.View.extend({
   initialize: function() {
-    var blocks = new BlockList();
-    blocks.fetch();
-    console.log(blocks);
     this.render();
   },
 
+  events: {
+    'click .next': 'next',
+    'click .previous': 'previous'
+  },
+
+  next: function() {
+    alert('next');
+  },
+
+  previous: function() {
+    alert('previous');
+  },
+
   render: function() {
-    $('#app').text('Some text');
+    var text = '';
+
+    this.model.models.forEach(function(f) {
+      console.log(f);
+    });
+
+    // this.$el.html('asdasd');
     return this;
   },
 });

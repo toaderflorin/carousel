@@ -12255,13 +12255,19 @@ return jQuery;
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
+var $ = __webpack_require__(1);
 var Backbone = __webpack_require__(0);
 var App = __webpack_require__(5);
-var $ = __webpack_require__(1);
+var BlockList = __webpack_require__(6);
 
 $(function() {
-  var app = new App();
-  app.initialize();
+  var blockList = new BlockList();
+  blockList.fetch({
+    success: function() {
+      var app = new App({ el: $('#app'), model: blockList });
+      app.initialize();
+    }
+  });
 });
 
 
@@ -13851,21 +13857,32 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscor
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Backbone = __webpack_require__(0);
-var BlockList = __webpack_require__(6);
-
 var $ = __webpack_require__(1);
+var Backbone = __webpack_require__(0);
 
 var App = Backbone.View.extend({
   initialize: function() {
-    var blocks = new BlockList();
-    blocks.fetch();
-    console.log(blocks);
     this.render();
   },
 
+  events: {
+    'click .next': 'next',
+    'click .previous': 'previous'
+  },
+
+  next: function() {
+    alert('next');
+  },
+
   render: function() {
-    $('#app').text('Some text');
+    var text = '';
+
+    this.model.models.forEach(function(f) {
+      console.log(f);
+    });
+
+    // this.$el.html('asdasd');
+    console.log(this.$el);
     return this;
   },
 });
@@ -13895,7 +13912,6 @@ module.exports = BlockList;
 var Backbone = __webpack_require__(0);
 
 var Block = Backbone.Model.extend({
-  // url: '/api/blocks'
 });
 
 module.exports = Block;
