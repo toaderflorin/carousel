@@ -1,10 +1,9 @@
 var Backbone = require('backbone');
+var Block = require('./block');
 
 var BlockList = Backbone.Collection.extend({
-  title: "First Block",
-  images: [
-    'url1',
-    'url2',
-    'url3'
-  ]
+  model: Block,
+  url: '/api/blocks'
 });
+
+module.exports = BlockList;
