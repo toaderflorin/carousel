@@ -13860,7 +13860,7 @@ var App = Backbone.View.extend({
   },
 
   render: function() {
-    $('div#app').text('Some text');
+    $('#app').text('Some text');
     return this;
   },
 });

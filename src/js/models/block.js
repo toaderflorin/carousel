@@ -8,5 +8,3 @@ var Block = Backbone.Model.extend({
     'url3'
   ]
 });
-
-var Block =

@@ -9,6 +9,20 @@ app.get('/', (req, res) => {
   res.send(contents);
 });
 
+app.get('/api/blocks', (req, res) => {
+  res.send([{
+      title: 'Block 1',
+      images: []
+    }, {
+      title: 'Block 2',
+      images: []
+    }, {
+      title: 'Block 3',
+      images: []
+    }
+  ]);
+});
+
 app.listen(3000, function() {
   console.log('Started successfully, open localhost:3000.');
 });
