@@ -1,0 +1,22 @@
+{
+  "name": "carousel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toaderflorin/carousel.git"
+  },
+  "author": "Florin Toader",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toaderflorin/carousel/issues"
+  },
+  "homepage": "https://github.com/toaderflorin/carousel#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
