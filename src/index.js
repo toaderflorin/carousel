@@ -18,8 +18,7 @@ app.get('/api/blocks', (req, res) => {
         'https://scontent.fsbz1-1.fna.fbcdn.net/v/t1.0-9/21032844_10155159729868277_8580367252056650586_n.jpg?oh=ff77d0bf0897388e64adc9b0add02206&oe=5A9DC914',
         'https://images-na.ssl-images-amazon.com/images/M/MV5BYmQ3OWNmMjgtMTdhOS00YTQ4LTkyZGYtNTQyMGQ0NjZlMDQzXkEyXkFqcGdeQXVyNTAxMjIzMjU@._V1_.jpg'
       ]
-    },
-    {
+    }, {
       title: 'Block 2',
       images: [
         'https://upload.wikimedia.org/wikipedia/en/1/11/Michaeljacksondangerous.jpg',
@@ -35,8 +34,53 @@ app.get('/api/blocks', (req, res) => {
         'http://img.wennermedia.com/920-width/rs-135957-ccc99759f0d6e8464082896511455136edb1d1c4.jpg',
         'https://www.mrvinyl.co.za/wp-content/uploads/2014/04/guns-n-roses-use-your-illusion-1.jpeg'
       ]
-    }
-  ]);
+    }, {
+        title: 'Block 4',
+        images: [
+          'https://upload.wikimedia.org/wikipedia/en/1/11/Michaeljacksondangerous.jpg',
+          'http://www.feelnumb.com/wp-content/uploads/2011/10/Led_Zeppelin-Led_Zeppelin-Frontal.jpg',
+          'http://www.mad-eyes.net/music/madonna-first-album/img/album_madonna_back.jpg',
+          'https://pre00.deviantart.net/52cf/th/pre/i/2012/085/b/b/madonna_first_album_cover_by_fabio2k5-d4u0m0h.jpg'
+        ]
+      }, {
+        title: 'Block 5',
+        images: [
+          'https://upload.wikimedia.org/wikipedia/en/1/11/Michaeljacksondangerous.jpg',
+          'http://www.feelnumb.com/wp-content/uploads/2011/10/Led_Zeppelin-Led_Zeppelin-Frontal.jpg',
+          'http://www.mad-eyes.net/music/madonna-first-album/img/album_madonna_back.jpg',
+          'https://pre00.deviantart.net/52cf/th/pre/i/2012/085/b/b/madonna_first_album_cover_by_fabio2k5-d4u0m0h.jpg'
+        ]
+      },  {
+        title: 'Block 6',
+        images: [
+          'https://upload.wikimedia.org/wikipedia/en/1/11/Michaeljacksondangerous.jpg',
+          'http://www.feelnumb.com/wp-content/uploads/2011/10/Led_Zeppelin-Led_Zeppelin-Frontal.jpg'
+        ]
+      }, {
+        title: 'Block 7',
+        images: [
+          'http://www.mad-eyes.net/music/madonna-first-album/img/album_madonna_back.jpg',
+          'https://pre00.deviantart.net/52cf/th/pre/i/2012/085/b/b/madonna_first_album_cover_by_fabio2k5-d4u0m0h.jpg'
+        ]
+      }, {
+        title: 'Block 8',
+        images: [
+          'https://upload.wikimedia.org/wikipedia/en/1/11/Michaeljacksondangerous.jpg',
+          'http://www.feelnumb.com/wp-content/uploads/2011/10/Led_Zeppelin-Led_Zeppelin-Frontal.jpg',
+          'http://www.mad-eyes.net/music/madonna-first-album/img/album_madonna_back.jpg',
+          'https://pre00.deviantart.net/52cf/th/pre/i/2012/085/b/b/madonna_first_album_cover_by_fabio2k5-d4u0m0h.jpg'
+        ]
+      }, {
+        title: 'Block 9',
+        images: [
+          'https://upload.wikimedia.org/wikipedia/en/1/11/Michaeljacksondangerous.jpg',
+          'http://www.feelnumb.com/wp-content/uploads/2011/10/Led_Zeppelin-Led_Zeppelin-Frontal.jpg',
+          'http://www.mad-eyes.net/music/madonna-first-album/img/album_madonna_back.jpg',
+          'https://pre00.deviantart.net/52cf/th/pre/i/2012/085/b/b/madonna_first_album_cover_by_fabio2k5-d4u0m0h.jpg'
+        ]
+      }
+    ]
+  );
 });
 
 app.listen(3000, function() {
