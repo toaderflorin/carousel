@@ -11,72 +11,58 @@ app.get('/', (req, res) => {
 
 app.get('/api/blocks', (req, res) => {
   res.send([{
-      title: 'Block 1',
+      title: 'Bob Dylan',
       images: [
         'https://upload.wikimedia.org/wikipedia/en/d/d6/Bob_Dylan_-_The_Freewheelin%27_Bob_Dylan.jpg',
         'http://wp.production.patheos.com/blogs/acatholicthinker/files/2015/09/Bob_Dylan_-_The_Times_They_are_a-Changin.jpg',
-        'https://scontent.fsbz1-1.fna.fbcdn.net/v/t1.0-9/21032844_10155159729868277_8580367252056650586_n.jpg?oh=ff77d0bf0897388e64adc9b0add02206&oe=5A9DC914',
-        'https://images-na.ssl-images-amazon.com/images/M/MV5BYmQ3OWNmMjgtMTdhOS00YTQ4LTkyZGYtNTQyMGQ0NjZlMDQzXkEyXkFqcGdeQXVyNTAxMjIzMjU@._V1_.jpg'
       ]
     }, {
-      title: 'Block 2',
+      title: 'Michael Jackson',
       images: [
         'https://upload.wikimedia.org/wikipedia/en/1/11/Michaeljacksondangerous.jpg',
-        'http://www.feelnumb.com/wp-content/uploads/2011/10/Led_Zeppelin-Led_Zeppelin-Frontal.jpg',
-        'http://www.mad-eyes.net/music/madonna-first-album/img/album_madonna_back.jpg',
-        'https://pre00.deviantart.net/52cf/th/pre/i/2012/085/b/b/madonna_first_album_cover_by_fabio2k5-d4u0m0h.jpg'
+        'https://www.famousbirthdays.com/headshots/michael-jackson-8.jpg'
       ]
     }, {
-      title: 'Block 3',
+      title: 'Guns \'n Roses',
       images: [
-        'https://cps-static.rovicorp.com/3/JPG_500/MI0001/117/MI0001117614.jpg?partner=allrovi.com',
-        'https://is5-ssl.mzstatic.com/image/thumb/Music/v4/a8/c6/e5/a8c6e580-eef1-a452-acab-3feff96facd6/UMG_cvrart_00602537348855_01_RGB72_1500x1500_13UMGIM16239.jpg/1200x630bb.jpg',
-        'http://img.wennermedia.com/920-width/rs-135957-ccc99759f0d6e8464082896511455136edb1d1c4.jpg',
-        'https://www.mrvinyl.co.za/wp-content/uploads/2014/04/guns-n-roses-use-your-illusion-1.jpeg'
+        'https://www.mrvinyl.co.za/wp-content/uploads/2014/04/guns-n-roses-use-your-illusion-1.jpeg',
+        'https://i.scdn.co/image/80920b4fc80b6d970e2934eb8abe27014fc60632'
       ]
     }, {
-        title: 'Block 4',
+        title: 'Madonna',
         images: [
-          'https://upload.wikimedia.org/wikipedia/en/1/11/Michaeljacksondangerous.jpg',
-          'http://www.feelnumb.com/wp-content/uploads/2011/10/Led_Zeppelin-Led_Zeppelin-Frontal.jpg',
           'http://www.mad-eyes.net/music/madonna-first-album/img/album_madonna_back.jpg',
+          'https://upload.wikimedia.org/wikipedia/en/e/e0/Bad_Girl_Madonna.png',
           'https://pre00.deviantart.net/52cf/th/pre/i/2012/085/b/b/madonna_first_album_cover_by_fabio2k5-d4u0m0h.jpg'
         ]
       }, {
-        title: 'Block 5',
+        title: 'Led Zeppelin',
         images: [
-          'https://upload.wikimedia.org/wikipedia/en/1/11/Michaeljacksondangerous.jpg',
-          'http://www.feelnumb.com/wp-content/uploads/2011/10/Led_Zeppelin-Led_Zeppelin-Frontal.jpg',
-          'http://www.mad-eyes.net/music/madonna-first-album/img/album_madonna_back.jpg',
-          'https://pre00.deviantart.net/52cf/th/pre/i/2012/085/b/b/madonna_first_album_cover_by_fabio2k5-d4u0m0h.jpg'
-        ]
-      },  {
-        title: 'Block 6',
-        images: [
-          'https://upload.wikimedia.org/wikipedia/en/1/11/Michaeljacksondangerous.jpg',
           'http://www.feelnumb.com/wp-content/uploads/2011/10/Led_Zeppelin-Led_Zeppelin-Frontal.jpg'
         ]
-      }, {
-        title: 'Block 7',
+      },  {
+        title: 'SRV',
         images: [
-          'http://www.mad-eyes.net/music/madonna-first-album/img/album_madonna_back.jpg',
-          'https://pre00.deviantart.net/52cf/th/pre/i/2012/085/b/b/madonna_first_album_cover_by_fabio2k5-d4u0m0h.jpg'
+          'https://cps-static.rovicorp.com/3/JPG_400/MI0001/399/MI0001399374.jpg?partner=allrovi.com',
+          'https://i.pinimg.com/736x/17/14/f9/1714f915d1d222c1b6cafbb4c4575c8d--guitar-players-guitarist.jpg'
         ]
       }, {
-        title: 'Block 8',
+        title: 'Hendrix',
         images: [
-          'https://upload.wikimedia.org/wikipedia/en/1/11/Michaeljacksondangerous.jpg',
-          'http://www.feelnumb.com/wp-content/uploads/2011/10/Led_Zeppelin-Led_Zeppelin-Frontal.jpg',
-          'http://www.mad-eyes.net/music/madonna-first-album/img/album_madonna_back.jpg',
-          'https://pre00.deviantart.net/52cf/th/pre/i/2012/085/b/b/madonna_first_album_cover_by_fabio2k5-d4u0m0h.jpg'
+          'https://www.famousbirthdays.com/headshots/jimi-hendrix-1.jpg',
+          'https://www.theplace2.ru/archive/jimmy_hendrix/img/JIMI_B10_web_size2.jpg'
         ]
       }, {
-        title: 'Block 9',
+        title: 'Tracy Chapman',
         images: [
-          'https://upload.wikimedia.org/wikipedia/en/1/11/Michaeljacksondangerous.jpg',
-          'http://www.feelnumb.com/wp-content/uploads/2011/10/Led_Zeppelin-Led_Zeppelin-Frontal.jpg',
-          'http://www.mad-eyes.net/music/madonna-first-album/img/album_madonna_back.jpg',
-          'https://pre00.deviantart.net/52cf/th/pre/i/2012/085/b/b/madonna_first_album_cover_by_fabio2k5-d4u0m0h.jpg'
+          'http://bornwiki.com/bio/tracy-chapman.jpg',
+          'https://cps-static.rovicorp.com/3/JPG_500/MI0003/501/MI0003501120.jpg?partner=allrovi.com'
+        ]
+      }, {
+        title: 'Jewel',
+        images: [
+          'https://i.pinimg.com/736x/0b/70/8e/0b708ef48e1eaf3404f1f2409dd06972--jewel-singer-utah-usa.jpg',
+          'https://www.biography.com/.image/c_fill%2Ccs_srgb%2Cg_face%2Ch_300%2Cq_80%2Cw_300/MTIwNjA4NjMzNTk1NTk0MjUy/jewel-224921-1-402.jpg'
         ]
       }
     ]
