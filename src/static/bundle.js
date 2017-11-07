@@ -13871,8 +13871,8 @@ var Carousel = Backbone.View.extend({
   },
 
   events: {
-    'click .previous': 'previous',
-    'click .next': 'next',
+    'click #previous': 'previous',
+    'click #next': 'next',
   },
 
   next: function() {
@@ -13906,19 +13906,21 @@ var Carousel = Backbone.View.extend({
   },
 
   updateButtonState: function() {
-    $('.next').prop('disabled', false);
-    $('.previous').prop('disabled', false);
+    $('#next').prop('disabled', false);
+    $('#previous').prop('disabled', false);
 
     if (this.currentGroup === 0) {
-      $('.previous').prop('disabled', true);
+      $('#previous').prop('disabled', true);
     }
 
     if (this.currentGroup === this.totalGroups - 1) {
-      $('.next').prop('disabled', true);
+      $('#next').prop('disabled', true);
     }
   },
 
   randomizeImages: function() {
+    // randomizing the images in the blocks which will be displayed next
+
     var images = $('.slide-item').toArray();
     var max = this.currentGroup + 4;
 
