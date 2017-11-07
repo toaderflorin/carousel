@@ -5,6 +5,9 @@ var Carousel = Backbone.View.extend({
   initialize: function() {
     this.currentItems = [];
     this.animationRunning = false;
+    this.currentGroup = 0;
+    this.totalGroups = this.model.models.length;
+    this.updateButtonState();
     this.render();
   },
 
@@ -18,8 +21,10 @@ var Carousel = Backbone.View.extend({
       return;
     }
 
+    this.currentGroup++;
+    this.updateButtonState();
     this.animationRunning = true;
-    $('.slide').animate({ marginLeft: '-=210px'}, 500, () => {
+    $('.item-container').animate({ marginLeft: '-=840px'}, 500, () => {
       this.animationRunning = false;
     });
   },
@@ -29,16 +34,35 @@ var Carousel = Backbone.View.extend({
       return;
     }
 
+    this.currentGroup--;
+    this.updateButtonState();
     this.animationRunning = true;
-    $('.slide').animate({ marginLeft: '+=210px' }, 500, () => {
+    $('.item-container').animate({ marginLeft: '+=840px' }, 500, () => {
       this.animationRunning = false;
     });
   },
 
+  updateButtonState: function() {
+    $( ".next" ).prop( "disabled", false );
+    $( ".previous" ).prop( "disabled", false );
+
+    if (this.currentGroup === 0) {
+      $( ".previous" ).prop( "disabled", true );
+    }
+
+    if (this.currentGroup === this.totalGroups - 1) {
+      $( ".next" ).prop( "disabled", true );
+    }
+  },
+
   render: function() {
-    $('.slide').html('');
-    $('.slide').append('<li class="slide-item" style="background-image: url(\'https://image.freepik.com/free-photo/cloudy-blue-sky_1112-236.jpg\');"></li>');
-    $('.slide').append('<li class="slide-item" style="background-image: url(https://image.freepik.com/free-photo/cloudy-blue-sky_1112-236.jpg);"></li>');
+    $('.item-container').html('');
+
+    this.model.models.forEach(function (m) {
+      m.attributes.images.forEach(function (m2) {
+        $('.item-container').append(`<li class="slide-item" style="background-image: url('${m2}');"></li>`);
+      });
+    });
 
     return this;
   }
