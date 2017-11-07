@@ -12257,14 +12257,14 @@ return jQuery;
 
 var $ = __webpack_require__(1);
 var Backbone = __webpack_require__(0);
-var App = __webpack_require__(5);
+var Carousel = __webpack_require__(5);
 var BlockList = __webpack_require__(6);
 
 $(function() {
   var blockList = new BlockList();
   blockList.fetch({
     success: function() {
-      var app = new App({ el: $('#app'), model: blockList });
+      var app = new Carousel({ el: $('#app'), model: blockList });
       app.initialize();
     }
   });
@@ -13860,31 +13860,50 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscor
 var $ = __webpack_require__(1);
 var Backbone = __webpack_require__(0);
 
-var App = Backbone.View.extend({
+var Carousel = Backbone.View.extend({
   initialize: function() {
     this.currentItems = [];
+    this.animationRunning = false;
     this.render();
   },
 
   events: {
+    'click .previous': 'previous',
     'click .next': 'next',
-    'click .previous': 'previous'
   },
 
   next: function() {
-     $('.slide').animate({ marginLeft: '-=240px' }, 500);
+    if (this.animationRunning) {
+      return;
+    }
+
+    this.animationRunning = true;
+    $('.slide').animate({ marginLeft: '-=210px'}, 500, () => {
+      this.animationRunning = false;
+    });
   },
 
   previous: function() {
-    $('.slide').animate({ marginLeft: '+=240px' }, 500);
+    if (this.animationRunning) {
+      return;
+    }
+
+    this.animationRunning = true;
+    $('.slide').animate({ marginLeft: '+=210px' }, 500, () => {
+      this.animationRunning = false;
+    });
   },
 
   render: function() {
+    $('.slide').html('');
+    $('.slide').append('<li class="slide-item" style="background-image: url(\'https://image.freepik.com/free-photo/cloudy-blue-sky_1112-236.jpg\');"></li>');
+    $('.slide').append('<li class="slide-item" style="background-image: url(https://image.freepik.com/free-photo/cloudy-blue-sky_1112-236.jpg);"></li>');
+
     return this;
   }
 });
 
-module.exports = App;
+module.exports = Carousel;
 
 
 /***/ }),
