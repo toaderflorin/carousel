@@ -13859,6 +13859,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscor
 
 var $ = __webpack_require__(1);
 var Backbone = __webpack_require__(0);
+var animationSpeed = 500;
 
 var Carousel = Backbone.View.extend({
   initialize: function() {
@@ -13885,7 +13886,7 @@ var Carousel = Backbone.View.extend({
     this.randomizeImages();
     this.animationRunning = true;
 
-    $('.item-container').animate({ marginLeft: '-=840px'}, 500, () => {
+    $('.item-container').animate({ marginLeft: '-=840px'}, animationSpeed, () => {
       this.animationRunning = false;
     });
   },
@@ -13900,7 +13901,7 @@ var Carousel = Backbone.View.extend({
     this.randomizeImages();
     this.animationRunning = true;
 
-    $('.item-container').animate({ marginLeft: '+=840px' }, 500, () => {
+    $('.item-container').animate({ marginLeft: '+=840px' }, animationSpeed, () => {
       this.animationRunning = false;
     });
   },
@@ -13921,7 +13922,7 @@ var Carousel = Backbone.View.extend({
   randomizeImages: function() {
     // randomizing the images in the blocks which will be displayed next
 
-    var images = $('.slide-item').toArray();
+    var images = $('.item').toArray();
     var max = this.currentGroup + 4;
 
     if (max > this.totalGroups) {
@@ -13939,11 +13940,10 @@ var Carousel = Backbone.View.extend({
     $('.item-container').html('');
 
     this.model.models.forEach(function (m) {
-      $('.item-container').append(`<li class="slide-item" ></li>`);
+      $('.item-container').append('<li class="item"></li>');
     });
 
     this.randomizeImages();
-
     return this;
   }
 });

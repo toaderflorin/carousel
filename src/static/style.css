@@ -28,7 +28,7 @@ header {
 }
 
 #app {
-  margin-top: 50px
+  margin-top: 50px;
 }
 
 #next {
@@ -52,7 +52,7 @@ header {
   margin: 0;
   padding: 0;
   width: 840px;
-  height: 230px;
+  height: 200px;
 }
 
 .item-container {
@@ -60,10 +60,10 @@ header {
   margin: 0;
   padding: 0;
   width: 10000px;
-  height: 400px;
+  height: 200px;
 }
 
-.slide-item {
+.item {
   display: block;
   list-style-type: none;
   float: left;
